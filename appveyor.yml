@@ -14,7 +14,9 @@ skip_commits:
     - 'roles/*/files/*'
   message: /\[minor\]/
 
-image: ubuntu
+image: 
+  - Ubuntu
+  - Ubuntu1804
 
 matrix:
   fast_finish: true
