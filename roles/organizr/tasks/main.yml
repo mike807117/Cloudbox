@@ -103,3 +103,17 @@
     force: yes
     validate_certs: no
   ignore_errors: yes
+
+#
+#- name: Edit Organizr configuration
+#  tags: ['mediabox']
+#  lineinfile:
+#    dest: "/opt/organizr/www/Dashboard/api/config/default.php"
+#    regexp: "{{ item.regexp }}"
+#    line: "{{ item.line }}"
+#    backrefs:
+#  with_items:
+#    - regexp: 'authType'
+#      line: '"authType" => "internal",'
+#    - regexp: 'plexURL'
+#      line: '"plexURL" => "https://plex.{{ domain }}",'
